@@ -1,0 +1,25 @@
+<table class="table table-bordered table-striped table-condensed">
+    <thead>
+            ^ for field in collection.render_fields.itervalues()
+            <th>{{ field.label() }}<i class="pull-right icon-sort-up gray"></i></td>
+            ^ endfor
+        </tr>
+    </thead>
+
+    <tbody>
+        ^ for row in collection.rows
+        ^ set do = collection._set_active(row)
+        ^ set row_errors = collection.get_errors(row)
+        <tr>
+            ^ for field in collection.render_fields.itervalues()
+            <td>
+                {{ field.render() }}
+                ^ for error in row_errors.get(field, [])
+                <span class="grid_error">{{ error }}</span>
+                ^ endfor
+            </td>
+            ^ endfor
+        </tr>
+        ^ endfor
+    </tbody>
+</table>

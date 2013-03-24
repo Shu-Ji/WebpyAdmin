@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    ^ block title
+    {{ BRAND }}
+    ^ endblock
+    </title>
+
+
+    ^ block bootstrap_css
+    <link rel="stylesheet" href="{{ static('3rd/bootstrap/css/bootstrap.min.css') }}">
+    ^ endblock
+
+
+    ^ block fontawesome
+    <link rel="stylesheet" href="{{ static('3rd/fontawesome/fontawesome.css') }}">
+    ^ endblock
+
+
+    ^ block head
+    ^ endblock
+
+
+    ^ block bootstrap_responsive
+    <link rel="stylesheet" href="{{ static('3rd/bootstrap/css/bootstrap-responsive.min.css') }}">
+    ^ endblock
+</head>
+
+
+<body>
+^ block header
+<header>
+    <nav id="navbar" class="navbar navbar-fixed-top">
+    ^ block nav
+    ^ endblock
+    </nav>
+</header>
+^ endblock
+
+
+^ block content
+^ endblock
+
+
+^ block jquery
+<script src="{{ static('3rd/jquery-2.0.0b2.min.js') }}"></script>
+^ endblock
+
+
+^ block bootstrap_js
+<script src="{{ static('3rd/bootstrap/js/bootstrap.min.js') }}"></script>
+^ endblock
+
+
+{% block script %}{% endblock %}
+</body>
+</html>

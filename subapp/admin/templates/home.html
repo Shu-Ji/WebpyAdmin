@@ -1,0 +1,14 @@
+^ extends "base.html"
+
+
+^ block main
+<div class="well">
+^ for href, caption in nav_models
+^ if href == '|'
+<p class="nav-header">{{ caption }}</p>
+^ else
+<p><a href="{{ href }}">{{ caption }}</a></p>
+^ endif
+^ endfor
+</div>
+^ endblock

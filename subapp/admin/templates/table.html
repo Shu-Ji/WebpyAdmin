@@ -1,0 +1,72 @@
+^ if not is_ajax
+^ extends "base.html"
+
+
+<style>
+^ block style
+table .btn{
+    vertical-align: top;
+}
+td {
+    position: relative;
+}
+input {
+    width: 100px;
+}
+.toolbar {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    bottom: -5px;
+}
+.toolbar li {
+    float: left;
+    list-style-type: none;
+    margin-left: 5px;
+}
+tbody tr:hover td, tbody tr:hover th {
+    background-color: #f5f5f5;
+}
+thead tr {
+    cursor: pointer;
+}
+.no-sort {
+    cursor: default;
+}
+.gray {
+    color: #ddd;
+}
+.search {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+^ endblock
+</style>
+
+
+^ block main
+<div class="span12">
+    {{ table }}
+    <p>选择要搜索的字段：</p>
+    <div class="btn-group">
+        ^ for label, col in cols
+        <a data-c="{{ col }}" class="btn">{{ col if label == col else col ~ '(' ~ label ~ ')' }}</a>
+        ^ endfor
+    </div>
+    <div class="search">
+        <label for="q">输入搜索关键词：
+            <input id="q" type="text" class="input-medium search-query">
+            <a class="btn btn-primary">搜索</a>
+        </label>
+    </div>
+    <div class="search-result"></div>
+    <ul class="toolbar hide">
+        <li title="编辑"><a href="javascript:;" target="_blank"><i class="icon-pencil"></i></a></li>
+        <li title="添加"><a href="javascript:;" target="_blank"><i class="icon-plus"></i></a></li>
+        <li title="删除"><a href="javascript:;" class="del"><i class="icon-trash"></i></a></li>
+    </ul>
+</div>
+^ endblock
+^ else
+{{ table }}
+^ endif

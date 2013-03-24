@@ -1,0 +1,20 @@
+<table class="table table-bordered table-striped table-condensed">
+    <thead>
+        <tr>
+            ^ for field in collection.render_fields.itervalues()
+            <th>{{ field.label() }}<i class="pull-right icon-sort-up gray"></i></td>
+            ^ endfor
+        </tr>
+    </thead>
+
+    <tbody>
+        ^ for row in collection.rows
+        ^ set do = collection._set_active(row)
+        <tr>
+            ^ for field in collection.render_fields.itervalues()
+            <td>{{ field.render_readonly() }}</td>
+            ^ endfor
+        </tr>
+        ^ endfor
+    </tbody>
+</table>

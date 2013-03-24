@@ -1,0 +1,38 @@
+^ extends "base.html"
+
+
+^ block subscript
+<script src="{{ static('3rd/jquery.autosize.js') }}"></script>
+^ endblock
+
+
+<style>
+^ block style
+input:not([id*="dt__"]), textarea {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    box-sizing: border-box;
+}
+input[id*="dt__"] {
+    width:70px;
+}
+select[id*="dt__"] {
+    width: 90px;
+}
+textarea {
+    resize: none;
+    height: 160px;
+}
+^ endblock
+</style>
+
+
+^ block main
+<div class="span12">
+    <form class="form well">
+        {{ row }}
+        <a class="btn add btn-primary">添加</a>
+    </form>
+</div>
+^ endblock
