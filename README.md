@@ -12,8 +12,9 @@ Admin interface for web.py with formalchemy + sqlalchemy + jinja2 + bootstrap + 
 * Sqlalchemy
 * Web.py
 * Formalchemy[注意本程序包中的formalchemy已经被改动过以适应本程序]
-* jQuery
-* Twitter Bootstrap
+* jQuery 2.0 beta
+* Twitter Bootstrap 2.3
+* 仅通过Chrome浏览器测试，不支持其他浏览器
 
 结构说明
 ---------------
