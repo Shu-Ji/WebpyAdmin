@@ -49,7 +49,30 @@ import admin.views
 url += (r'/admin', admin.views.app)
 ```
 
-好了，访问<http://localhost:8080/admin/admin>即可
+好了，访问<http://localhost:8080/admin/admin>即可。
+
+预览
+---------------
+
+首页
+
+![](https://raw.github.com/Shu-Ji/WebpyAdmin/master/doc/home.png)
+
+单页
+
+![](https://raw.github.com/Shu-Ji/WebpyAdmin/master/doc/view.png)
+
+添加
+
+![](https://raw.github.com/Shu-Ji/WebpyAdmin/master/doc/add.png)
+
+删除
+
+![](https://raw.github.com/Shu-Ji/WebpyAdmin/master/doc/del.png)
+
+修改
+
+![](https://raw.github.com/Shu-Ji/WebpyAdmin/master/doc/mod.png)
 
 进展
 ---------------
