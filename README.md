@@ -3,7 +3,7 @@ WebpyAdmin
 
 Admin interface for web.py with formalchemy + sqlalchemy + jinja2 + bootstrap + jQuery
 
-一个简单的web.py的Admin页面。
+为你的web.py应用添加一个简单的Admin页面。
 
 依赖关系
 ---------------
