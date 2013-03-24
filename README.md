@@ -50,7 +50,7 @@ import admin.views
 url += (r'/admin', admin.views.app)
 ```
 
-好了，访问<http://localhost:8080/admin/admin>即可。
+好了，访问<http://localhost:8080/admin>即可。
 
 预览
 ---------------
