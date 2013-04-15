@@ -11,7 +11,11 @@ class Admin(object):
     @classmethod
     def setup(cls, session, *Bases):
         '''加载admin应用的最初的初始化，传递所有的models'''
-        cls.models = [Base.__dict__['_decl_class_registry'] for Base in Bases]
+        # FIXME: 这里可能出现错误，需要使用其他方法得到base的所有model
+        for Base in Bases:
+            Base = Base.__dict__['_decl_class_registry']
+            Base.pop('_sa_module_registry')
+            cls.models.append(Base)
         cls.db = session
         return cls()
 
