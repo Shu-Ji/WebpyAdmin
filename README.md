@@ -15,6 +15,7 @@ Admin interface for web.py with formalchemy + sqlalchemy + jinja2 + bootstrap + 
 * jQuery 2.0 beta
 * Twitter Bootstrap 2.3
 * 仅通过Chrome浏览器测试，不支持其他浏览器
+* 其他要用到的python第三方模块(可通过pip安装): webhelpers tempita webob
 
 结构说明
 ---------------
